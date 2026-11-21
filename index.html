@@ -28,7 +28,7 @@
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--font); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--font); overflow-wrap: break-word; }
 main, header.top, footer { max-width: 940px; margin: 0 auto; padding: 0 16px; }
 header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; }
 header.top .brand { font-weight: 700; letter-spacing: .01em; }
@@ -40,7 +40,7 @@ h2 { font-size: clamp(21px, 4vw, 27px); margin: 44px 0 10px; padding-top: 8px; b
 h3 { font-size: 19px; margin: 26px 0 8px; }
 h4 { font-size: 16px; margin: 18px 0 6px; }
 p, li { max-width: 72ch; }
-a { color: var(--accent); }
+a { color: var(--accent); overflow-wrap: anywhere; }
 .lede { font-size: 18px; color: var(--muted); }
 .small { font-size: 13px; color: var(--muted); }
 code, pre { font-family: var(--mono); font-size: 13.5px; background: var(--code); border-radius: 6px; }
@@ -142,7 +142,7 @@ cell of the estate genome: its own CI re-runs the birth check on every push.</p>
       check), byte for byte. This page carries the same files and links them in your browser.</td></tr>
     <tr><th scope="row"><code>genome/</code></th><td>The hooks the birth check runs (judge, lane, health, tombstone) and <code>act.mjs</code>, which answers a question.</td></tr>
     <tr><th scope="row"><code>seed.json</code></th><td>What this cell is, its lane, its judge and its cases, its hooks and where it came from.</td></tr>
-    <tr><th scope="row"><code>FOLD.json</code></th><td>The engine commit that folded it (<code>cddcc26</code>) and the hash of every source and kernel file.</td></tr>
+    <tr><th scope="row"><code>FOLD.json</code></th><td>The engine commit that folded it (<code>c0ff804</code>) and the hash of every source and kernel file.</td></tr>
   </tbody>
 </table></div>
 
