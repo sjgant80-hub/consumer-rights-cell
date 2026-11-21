@@ -1,0 +1,20 @@
+{
+ "rule": "in lane when at least 50% of the question's content words appear as whole words in the indexed passages",
+ "share": 0.5,
+ "tune": {
+  "inLaneAccepted": 1,
+  "offTopicRefused": 0.9333,
+  "n": [
+   186,
+   30
+  ]
+ },
+ "eval": {
+  "inLaneAccepted": 1,
+  "offTopicRefused": 0.8667,
+  "n": [
+   186,
+   30
+  ]
+ }
+}

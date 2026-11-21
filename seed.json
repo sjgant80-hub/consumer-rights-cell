@@ -1,0 +1,61 @@
+{
+  "genome": "1",
+  "name": "consumer-rights-cell",
+  "kind": "repo",
+  "purpose": "Answers questions about the Consumer Rights Act 2015, Part 1 from its own text only: the best-supported sentence, word for word, with its passage and character offsets. Refuses questions outside its lane.",
+  "lane": {
+    "id": "consumer-rights-cell",
+    "accepts": "a question about the Consumer Rights Act 2015, Part 1",
+    "refuses": "questions whose words the the Consumer Rights Act 2015, Part 1 text does not use"
+  },
+  "interface": {
+    "in": "{\"question\":\"<text>\"} to ask (node genome/act.mjs); an answer record {question,source,start,end,text} to audit",
+    "out": "a verified answer record (passage id, character offsets, the exact sentence), or a refusal that says why"
+  },
+  "judge": {
+    "what": "an answer record is right when its text is exactly the cited passage's characters at its offsets and that passage uses at least the lane share of the question's content words",
+    "run": "node genome/judge.mjs",
+    "cases": {
+      "good": {
+        "question": "Where is oral implied explained?",
+        "source": "01-chapter-1.md#1",
+        "start": 0,
+        "end": 128,
+        "text": "(2) It applies whether the contract is written or oral or implied from the parties' conduct, or more than one of these combined."
+      },
+      "bad": {
+        "question": "Where is oral implied explained?",
+        "source": "01-chapter-1.md#1",
+        "start": 0,
+        "end": 128,
+        "text": "(2) It apply whether the contract is written or oral or implied from the parties' conduct, or more than one of these combined."
+      }
+    }
+  },
+  "boundary": {
+    "run": "node genome/lane.mjs",
+    "inLane": {
+      "question": "Where is oral implied explained?"
+    },
+    "outOfLane": {
+      "question": "What is the best pizza topping?"
+    },
+    "escalate": "kar"
+  },
+  "health": {
+    "run": "node genome/health.mjs"
+  },
+  "tombstone": {
+    "apply": "node genome/tombstone.mjs apply",
+    "restore": "node genome/tombstone.mjs restore"
+  },
+  "act": {
+    "run": "node genome/act.mjs",
+    "in": "{\"question\":\"<text>\"}"
+  },
+  "provenance": {
+    "repo": "sjgant80-hub/consumer-rights-cell",
+    "by": "Kar, for Simon Gant",
+    "born": "2026-11-21"
+  }
+}

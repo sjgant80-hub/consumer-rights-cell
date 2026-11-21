@@ -1,0 +1,77 @@
+{
+ "engine": {
+  "repo": "sjgant80-hub/genome-fold",
+  "commit": "cddcc263cced399463995008a74eeaa5038ac36c",
+  "clean": true
+ },
+ "folded": "2026-11-21",
+ "counts": {
+  "docs": 5,
+  "dropped": 0,
+  "passages": 372,
+  "questions": 372
+ },
+ "lane": {
+  "share": 0.5,
+  "rule": "in lane when at least 50% of the question's content words appear as whole words in the indexed passages"
+ },
+ "corpus": [
+  {
+   "path": "01-chapter-1.md",
+   "sha256": "c029e84216858a44125f3a5c7359b2acc68e13114d7b9b5fdfe14b482d58c832",
+   "bytes": 2667
+  },
+  {
+   "path": "02-chapter-2.md",
+   "sha256": "7f86fa496844133b018be1e10d996ef541853d30ffacf1fd3d3398ab87f870a8",
+   "bytes": 51111
+  },
+  {
+   "path": "03-chapter-3.md",
+   "sha256": "a9db8287aebaa1cc20dd521b3f864a4c80f5e9cf6bc8fc1a98952f091f5ab410",
+   "bytes": 23230
+  },
+  {
+   "path": "04-chapter-4.md",
+   "sha256": "aae3f116d82ab51c149906f126f0d34fa1426313c9a00732fd4ae5bf2de49b90",
+   "bytes": 11258
+  },
+  {
+   "path": "05-chapter-5.md",
+   "sha256": "8ce42c9f54fa93a50ead1db3b8f9879e639f57ed274033e9b068fa74522248df",
+   "bytes": 3691
+  }
+ ],
+ "skipped": [],
+ "licence": {
+  "name": "the Open Government Licence v3.0",
+  "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: the Consumer Rights Act 2015, Part 1, from legislation.gov.uk (https://www.legislation.gov.uk/ukpga/2015/15/part/1), the text as revised to 29 October 2026, retrieved 21 November 2026 and converted to markdown, one file per chapter, by genome-fold (examples/consumer-rights-act/prepare.mjs). Editorial notes and amendment marks were left out; the words of the law were not changed."
+ },
+ "kernel": [
+  {
+   "path": "kernel/src/fold.mjs",
+   "sha256": "33badba6c12288ca2cefe58cac771e5c69d47394ab64be36beb5b64c77a9f471"
+  },
+  {
+   "path": "kernel/src/page.mjs",
+   "sha256": "5430b5164d3a8e1305870881eb06c3a0a1d892300958a4148e55a15f6205ad9f"
+  },
+  {
+   "path": "kernel/vendor/docdec/src/gate.mjs",
+   "sha256": "3f0b10802fa42bf793404b59996699210b72ce89b07aaca067cc060ea3e3326c"
+  },
+  {
+   "path": "kernel/vendor/docdec/src/late.mjs",
+   "sha256": "a37b4c4723a1ba13d66273db6b1a7e8df3cae980c928fa63ceeb94de68695193"
+  },
+  {
+   "path": "kernel/vendor/docdec/genome/lane-share.mjs",
+   "sha256": "6195abe9d619b7e0c9aae139d7827c17bc7b524804ef554c3cd572ef0a92c4ca"
+  },
+  {
+   "path": "kernel/vendor/estate-genome/src/genome.mjs",
+   "sha256": "7fdb545fae05ab74578b4a3c3714ecaff894b7a516e4e23b58d427dfecce43d1"
+  }
+ ]
+}
